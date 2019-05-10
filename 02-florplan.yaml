@@ -1,0 +1,6 @@
+title: Floor plan
+panel: true
+#background: center / cover no-repeat url("/local/pics/back.png") fixed
+icon: mdi:floor-plan
+cards:
+- !include Plan.yaml

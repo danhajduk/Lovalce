@@ -1,0 +1,66 @@
+title: Stats
+path: Stats
+
+cards:
+
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          title: Lights
+          show_header_toggle: false
+          entities:
+          - light.bathroom_light
+          - light.computer_light
+          - light.dining_light
+          - light.hall_light
+          - light.kids_room_light
+          - light.kitchen_light
+          - light.laundry_light
+          - light.livingroom_light
+          - light.mirror_light
+          - light.toilet_light
+          - light.toys_light
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          title: States
+          show_header_toggle: false
+          entities:
+          - input_boolean.goodnight
+          - input_boolean.kids_sleep
+          - input_boolean.lights_enabled
+          - input_boolean.lights_needed
+          - input_boolean.living_only
+          - input_boolean.lockdown
+          - input_boolean.presence
+          - input_boolean.reset
+          - input_boolean.test_mode
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          title: Sky States
+          show_header_toggle: false
+          entities:
+          - input_boolean.dawn
+          - input_boolean.dusk
+          - input_boolean.evening
+          - input_boolean.goldenhour
+          - input_boolean.goldenhourend
+          - input_boolean.morning
+          - input_boolean.nadir
+          - input_boolean.nauticaldawn
+          - input_boolean.nauticaldusk
+          - input_boolean.night
+          - input_boolean.nightend
+          - input_boolean.solarnoon
+          - input_boolean.sunrise
+          - input_boolean.sunriseend
+          - input_boolean.sunset
+          - input_boolean.sunsetstart
+            

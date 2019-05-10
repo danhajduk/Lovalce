@@ -1,0 +1,407 @@
+type: picture-elements
+image: /local/pics/floor_plan.png
+elements: 
+- type: image
+  entity: light.toys_light
+  tap_action: 
+    action: none
+  image: /local/pics/playroom_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.livingroom_light
+  tap_action: 
+    action: none
+  image: /local/pics/livingroom_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.dining_light
+  tap_action: 
+    action: none
+  image: /local/pics/dining_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.laundry_light
+  tap_action: 
+    action: none
+  image: /local/pics/laundry_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(80%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+    transition: opacity 2s ease-in;
+- type: image
+  entity: light.kitchen_light
+  tap_action: 
+    action: none
+  image: /local/pics/kitchen_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(80%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+    transition: opacity 2s ease-in;
+- type: image
+  entity: light.toilet_light
+  tap_action: 
+    action: none
+  image: /local/pics/toilet_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.bathroom_light
+  tap_action: 
+    action: none
+  image: /local/pics/bath_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(80%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.hall_light
+  tap_action: 
+    action: none
+  image: /local/pics/empty.png
+  state_image:
+    "on": /local/pics/hall_on.png
+    "off": /local/pics/empty.png
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.computer_light
+  tap_action: 
+    action: none
+  image: /local/pics/office_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.kids_room_light
+  tap_action: 
+    action: none
+  image: /local/pics/master_bedroom_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.kids_room_light
+  tap_action: 
+    action: none
+  image: /local/pics/kids_bedroom_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+- type: image
+  entity: light.mirror_light
+  tap_action: 
+    action: none
+  image: /local/pics/mirror_on.png
+  state_filter:
+    "off": opacity(0%)
+    "on": opacity(100%)
+  style:
+    top: 50%
+    left: 50%
+    width: 100%
+
+#################################################################################
+## Home status :
+## Night mode, Lockdown, Countdown
+- type: image
+  entity: sensor.hassio_stat
+  image: /local/pics/black_blank.jpg
+  show_state: false
+  state_image:
+    "night mode": /local/pics/moon1.gif
+    "lockdown": /local/pics/locked.png
+    "10S countdown": /local/pics/locked.png
+  state_filter:
+    "loading": opacity(0%)
+    "idle": opacity(0%)
+    "10S countdown": opacity(20%)
+  show_name: false
+  tap_action:
+    action: more-info          
+  style:
+    top: 20.1%
+    left: 51.5%
+    width: 3%
+    transform: skewX(5deg)
+    border-radius: 10px
+    #background-color: 'rgba(180,180,180,0.5)'
+
+- type: image
+  entity: person.dan_hajduk
+  image: /local/pics/dan_away.png
+  show_state: false
+  state_image:
+    "home": /local/pics/dan.png
+  state_filter:
+    "home": opacity(100%)
+  show_name: false
+  tap_action:
+    action: none          
+  style:
+    top: 20.1%
+    left: 55.5%
+    width: 3%
+    transform: skewX(5deg)
+    border-radius: 80px
+
+- type: image
+  entity: person.irena_hajduk
+  image: /local/pics/ira_away.png
+  show_state: false
+  state_image:
+    "home": /local/pics/ira.png
+  state_filter:
+    "home": opacity(100%)
+  show_name: false
+  tap_action:
+    action: none          
+  style:
+    top: 20.1%
+    left: 59%
+    width: 3%
+    transform: skewX(5deg)
+    border-radius: 10px
+    
+- type: image
+  entity: sensor.hassio_stat
+  image: /local/pics/empty.png
+  show_state: false
+  state_image:
+    "10S countdown": /local/pics/10SecTimer.gif
+  state_filter:
+    "lockdown": opacity(100%)
+    "idle": opacity(0%)
+  style:
+    top: 24%
+    left: 45.8%
+    width: 2.5%
+    opacity: 0%
+    transform: skewX(5deg)
+    border-radius: 10px
+
+# - type: image
+#   entity: sensor.hassio_stat
+#   image: /local/pics/Cloud.png
+#   show_state: false
+#   style:
+#     top: 24%
+#     left: 45.8%
+#     width: 2.5%
+#     opacity: 0%
+#     transform: skewX(5deg)
+#     border-radius: 10px
+
+#################################################################################
+# Weather and room temperatures/humidity
+#################################################################################
+- card:
+    name: ' '
+    type: 'picture-elements'
+    show_state: false
+    image: /local/pics/empty.png
+    elements:
+      - type: image
+        entity: weather.openweathermap
+        image: /local/pics/empty.png
+        show_state: true
+        state_image:
+          "cloudy":         /local/pics/weather_cloudy.png
+          "partlycloudy":   /local/pics/weather_partlycloudy.png
+        style: 
+          top: 25%
+          left: 20%
+          width: 28%
+      - type: state-label
+        entity: weather.openweathermap
+        secondary_info: Temperature
+        style: 
+          top: 55%
+          left: 15%
+          width: 30%
+          color: white
+          
+  style:
+    top: 22%
+    left: 10.2%
+    --paper-card-background-color: 'rgba(123, 210, 232,.5)'
+    color: 'rgba(23, 210, 232.1)'
+    border-color: white
+    border-width: thin
+    width: 40%
+    border-radius: 50px 10px 10px 50px
+    transform: skewX(-7deg)
+  type: 'custom:card-modder'
+
+###  Temperature sensors
+- type: state-label
+  entity: input_number.temp_demo1
+  suffix: °C
+  style:
+    --paper-card-background-color: 'rgba(123, 210, 232,.5)'
+    color: 'rgba(23, 210, 232.1)'
+    top: 20.1%
+    left: 35.5%
+    width: 3%
+    transform: skewX(5deg)
+    border-radius: 10px
+
+- type: state-label
+  entity: input_number.temp_demo2
+  suffix: °C
+  style:
+    --paper-card-background-color: 'rgba(123, 210, 232,.5)'
+    color: 'rgba(23, 210, 232.1)'
+    top: 56%
+    left: 30%
+    width: 3%
+    transform: skewX(5deg)
+    border-radius: 10px
+
+- type: state-label
+  entity: input_number.temp_demo3
+  suffix: °C
+  style:
+    --paper-card-background-color: 'rgba(123, 210, 232,.5)'
+    color: 'rgba(23, 210, 232.1)'
+    top: 56%
+    left: 50%
+    width: 3%
+    transform: skewX(5deg)
+    border-radius: 10px
+# entity: input_number.hum_demo
+
+#################################################################################
+# Switches 
+#################################################################################
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.livingroom_light
+  style:
+    top: 35%
+    left: 37%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.dining_light
+  style:
+    top: 37%
+    left: 49%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.kitchen_light
+  style:
+    top: 38%
+    left: 65%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.laundry_light
+  style:
+    top: 42%
+    left: 53%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.toilet_light
+  style:
+    top: 42%
+    left: 48%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.bathroom_light
+  style:
+    top: 53%
+    left: 51%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.mirror_light
+  style:
+    top: 47%
+    left: 47%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.hall_light
+  style:
+    top: 51%
+    left: 40%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.computer_light
+  style:
+    top: 45%
+    left: 40%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.toys_light
+  style:
+    top: 45%
+    left: 30%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.kids_room_light
+  style:
+    top: 65%
+    left: 35%
+- type: state-icon
+  tap_action:
+    action: toggle
+  entity: light.kids_room_light
+  style:
+    top: 65%
+    left: 45%
