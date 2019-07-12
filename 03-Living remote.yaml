@@ -1,0 +1,76 @@
+title: Remote
+path: livingroom-remote
+
+cards:
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: binary_sensor.livingroom_tv
+          image: /local/pics/Samsung.png
+          show_name: true
+          tap_action: 
+            service: script.0000000000010
+          style:
+            font-size: 50%
+        - type: picture-entity
+          entity:  binary_sensor.stingtv
+          image: /local/pics/sting.png
+          tap_action: 
+            action: toggle
+          style:
+            font-size: 50%
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.0000000000010
+          image: /local/pics/netflix.png
+          tap_action: 
+            service: script.0000000000010
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/netflix.png
+            "off": /local/pics/netflix.png
+          show_state: false
+          show_name: false
+        - type: picture-entity
+          entity: script.0000000000011
+          image: /local/pics/stingtv.png
+          tap_action: 
+            action: toggle
+          style:
+            font-size: 50%
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.1562780937846
+          image: /local/pics/kitchen.jpg
+          tap_action: 
+            action: toggle
+          style:
+            font-size: 50%
+        - type: picture-entity
+          entity: script.1562780937847
+          image: /local/pics/kitchen.jpg
+          tap_action: 
+            action: toggle
+          style:
+            font-size: 50%
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.1562789410157
+          image: /local/pics/kitchen.jpg
+          tap_action: 
+            action: toggle
+          style:
+            font-size: 50%
+        - type: picture-entity
+          entity: script.1562789467239
+          image: /local/pics/kitchen.jpg
+          tap_action: 
+            action: toggle
+          style:
+            font-size: 50%

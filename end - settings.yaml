@@ -1,0 +1,83 @@
+title: Settings
+path: settings
+
+cards:
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          entities:
+            - proximity.home
+            - calendar.dancal
+            - calendar.irena_hayduk_gmail_com
+            - calendar.eyal
+            - input_number.temp_demo1
+            - input_number.temp_demo2
+            - input_number.temp_demo3
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          entities:
+            - sensor.dan_to_work_time
+            - sensor.home_to_work_time
+            - sensor.work_to_home_time
+            - sensor.work_to_home_time_35
+            
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          title: Living room AC
+          entities:
+            - input_boolean.ac_livingroom
+            - input_boolean.cool_livingroom
+            - input_boolean.heat_livingroom
+            - input_boolean.fan_livingroom
+            
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          title: Kids AC
+          entities:
+            - input_boolean.ac_kids
+            - input_boolean.cool_kids
+            - input_boolean.heat_kids
+            - input_boolean.fan_kids
+            
+    - type: horizontal-stack
+      cards:
+        - type: entities
+          title: Master bedroom AC
+          entities:
+            - input_boolean.ac_master_bed
+            - input_boolean.cool_master_bed
+            - input_boolean.heat_master_bed
+            - input_boolean.fan_master_bed
+
+  - type: 'custom:monster-card'
+    card:
+      type: entities
+      title: Packages Tracking
+      show_header_toggle: false
+    filter:
+      include:
+        - entity_id: sensor.seventeentrack_package_*
+  - type: custom:home-setter
+    pages:
+      - name: Main
+        path: lovelace/Home
+      - name: Mobile
+        path: lovelace/Stats
+      - name: Remote  
+        path: lovelace/livingroom-remote
+      - name: A/C  
+        path: lovelace/ac-remote
+  - type: picture-elements
+    image: /local/files/LUfuf8ow.jpg
+    elements:
+      - type: custom:username-element
+        style:
+          top: 59.6%
+          left: 26.8%

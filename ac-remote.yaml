@@ -1,0 +1,275 @@
+title: A/C
+path: ac-remote
+
+cards:
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: input_boolean.ac_livingroom
+          image: /local/pics/ac.png
+          show_name: true
+          style:
+            font-size: 50%
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.0000000000012
+          image: /local/pics/ac-cool.png
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000012
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac_cool_24.png
+            "off": /local/pics/ac_cool_24.png
+          show_state: false
+        - type: picture-entity
+          entity: script.0000000000014
+          image: /local/pics/ac-off.png
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000014
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-off.png
+            "off": /local/pics/ac-off.png
+          show_state: false
+        - type: picture-entity
+          entity:  script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-heat_26.png
+            "off": /local/pics/ac-heat_26.png
+          show_state: false
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000013
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac_cool_16.png
+            "off": /local/pics/ac_cool_16.png
+          show_state: false
+        - type: picture-entity
+          entity: script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-vent.png
+            "off": /local/pics/ac-vent.png
+          show_state: false
+        - type: picture-entity
+          entity:  script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-heat_32.png
+            "off": /local/pics/ac-heat_32.png
+          show_state: false
+
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: input_boolean.ac_master_bed
+          image: /local/pics/ac.png
+          show_name: true
+          tap_action: 
+            service: script.0000000000100
+          style:
+            font-size: 50%
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.0000000000100
+          image: /local/pics/ac-cool.png
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac_cool_24.png
+            "off": /local/pics/ac_cool_24.png
+          show_state: false
+        - type: picture-entity
+          entity: script.0000000000100
+          image: /local/pics/ac-off.png
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-off.png
+            "off": /local/pics/ac-off.png
+          show_state: false
+        - type: picture-entity
+          entity:  script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-heat_26.png
+            "off": /local/pics/ac-heat_26.png
+          show_state: false
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac_cool_16.png
+            "off": /local/pics/ac_cool_16.png
+          show_state: false
+        - type: picture-entity
+          entity: script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-vent.png
+            "off": /local/pics/ac-vent.png
+          show_state: false
+        - type: picture-entity
+          entity:  script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-heat_32.png
+            "off": /local/pics/ac-heat_32.png
+          show_state: false
+
+
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: input_boolean.ac_kids
+          image: /local/pics/ac.png
+          show_name: true
+          tap_action: 
+            service: script.0000000000100
+          style:
+            font-size: 50%
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.0000000000100
+          image: /local/pics/ac-cool.png
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac_cool_24.png
+            "off": /local/pics/ac_cool_24.png
+          show_state: false
+        - type: picture-entity
+          entity: script.0000000000100
+          image: /local/pics/ac-off.png
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-off.png
+            "off": /local/pics/ac-off.png
+          show_state: false
+        - type: picture-entity
+          entity:  script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-heat_26.png
+            "off": /local/pics/ac-heat_26.png
+          show_state: false
+    - type: horizontal-stack
+      cards:
+        - type: picture-entity
+          entity: script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac_cool_16.png
+            "off": /local/pics/ac_cool_16.png
+          show_state: false
+        - type: picture-entity
+          entity: script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-vent.png
+            "off": /local/pics/ac-vent.png
+          show_state: false
+        - type: picture-entity
+          entity:  script.0000000000100
+          show_name: false
+          tap_action: 
+            action: call-service
+            service: script.0000000000100
+          style:
+            font-size: 50%
+          state_image:
+            "on": /local/pics/ac-heat_32.png
+            "off": /local/pics/ac-heat_32.png
+          show_state: false

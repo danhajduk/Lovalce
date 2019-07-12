@@ -227,18 +227,27 @@ elements:
     transform: skewX(5deg)
     border-radius: 10px
 
-# - type: image
-#   entity: sensor.hassio_stat
-#   image: /local/pics/Cloud.png
-#   show_state: false
-#   style:
-#     top: 24%
-#     left: 45.8%
-#     width: 2.5%
-#     opacity: 0%
-#     transform: skewX(5deg)
-#     border-radius: 10px
+- type: image
+  entity: switcher_aio.control_device_switch
+  image: /local/pics/boiler_icon.png
+  show_state: false
+  tap_action:
+    action: toggle
+  state_image:
+    "on": /local/pics/boiler_icon_on.png
+  style:
+    top: 49%
+    left: 54%
+    width: 2.5%
+- type: state-label
+  entity: switcher_aio.time_left_sensor
+  style:
+    top: 53%
+    left: 53%
+    width: 2.5%
+    text-align: right
 
+  
 #################################################################################
 # Weather and room temperatures/humidity
 #################################################################################
@@ -255,6 +264,7 @@ elements:
         state_image:
           "cloudy":         /local/pics/weather_cloudy.png
           "partlycloudy":   /local/pics/weather_partlycloudy.png
+          "sunny":          /local/pics/weather_clear.png
         style: 
           top: 25%
           left: 20%
@@ -267,7 +277,16 @@ elements:
           left: 15%
           width: 30%
           color: white
-          
+          text-align: right
+      - type: state-label
+        entity: sensor.weather_temp
+        secondary_info: Temperature
+        style: 
+          top: 70%
+          left: 17%
+          width: 30%
+          color: white
+          text-align: right
   style:
     top: 22%
     left: 10.2%
