@@ -6,6 +6,7 @@ cards:
     cards:
     - type: horizontal-stack
       cards:
+# Livinroom A/C      
         - type: picture-entity
           entity: input_boolean.ac_livingroom
           image: /local/pics/ac.png
@@ -91,6 +92,7 @@ cards:
             "off": /local/pics/ac-heat_32.png
           show_state: false
 
+# Master Bedroom A/C      
   - type: vertical-stack
     cards:
     - type: horizontal-stack
@@ -182,6 +184,7 @@ cards:
             "off": /local/pics/ac-heat_32.png
           show_state: false
 
+# Kirs bedroom A/C      
 
   - type: vertical-stack
     cards:
